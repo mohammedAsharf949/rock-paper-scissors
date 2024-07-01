@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> Rock paper Scissors </title>
+
+    <style>
+      body{
+        background-color: black;
+      }
+      .text{
+        display: inline-block;
+        background-color: rgb(160, 160, 16);
+        padding:0px;
+        align-self: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 15px;
+        line-height: 20px;
+        text-wrap:wrap;
+      }
+      button{
+        height: 100px;
+        width: 100px;
+        margin-right: 20px;
+        border: 0;
+        cursor: pointer;
+        background-color:rgb(255, 255, 255) ;
+        background-size: 70px;
+        border-radius: 50px ;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.6s;
+      }
+      button:hover{
+        transform: translateY(20px);
+      }
+      .rock{
+        background-image: url(thumbnails/fist.png);
+      }
+      .paper{
+          background-image: url(thumbnails/hand-paper.png);
+      }
+      .scissors{
+        background-image: url(thumbnails/scissors.png);
+
+      }
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+    <Div style="display: inline-block;
+    text-align: center;
+ ">
+  <div style="display: grid;
+  grid-template-columns: 50px 150px ;
+  column-gap:10px;
+  width: 300px;
+  margin-bottom: 25px;
+  margin-left: 50px;">
+      <img style="margin-top: 15px;" src="thumbnails/rock-paper-scissors.png" height="50px"
+      style=" display: block;
+      margin-bottom: 20px;"
+      >
+    <p class="text"> Rock Paper Seissors</p>
+  </div>
+    <button class="rock" onclick="
+    
+    let randomNumber = Math.random();
+    let computerMove = ''
+    let result = ''
+
+    if (randomNumber >=0 && randomNumber < 1/3)
+    { computerMove= 'Rock'
+      result = 'tie'
+     }
+
+    else if (randomNumber >=1/3 && randomNumber < 2/3)
+    { computerMove= 'paper' 
+    result = 'You lose'
+    }
+
+    else if (randomNumber >=2/3 && randomNumber < 1 )
+    { computerMove= 'scissors' 
+    result = 'You win'
+    }
+
+    alert(`You picked rock. Computer picked ${computerMove}.${result}`)
+    "
+    ></button>
+
+
+
+
+    <button class="paper" onclick="
+    
+    let randomNumber = Math.random();
+    let computerMove = ''
+    let result = ''
+
+    if (randomNumber >=0 && randomNumber < 1/3)
+    { computerMove= 'Rock'
+      result = 'You win'
+     }
+
+    else if (randomNumber >=1/3 && randomNumber < 2/3)
+    { computerMove= 'paper' 
+    result = 'tie'
+    }
+
+    else if (randomNumber >=2/3 && randomNumber < 1 )
+    { computerMove= 'scissors' 
+    result = 'You Lose'
+    }
+
+    alert(`You picked paper. Computer picked ${computerMove}.${result}`)
+    ">
+    
+    </button>
+
+
+
+
+
+    <button class="scissors" onclick="
+    
+    let randomNumber = Math.random();
+    let computerMove = ''
+    let result = ''
+
+    if (randomNumber >=0 && randomNumber < 1/3)
+    { computerMove= 'Rock'
+      result = 'You lose'
+     }
+
+    else if (randomNumber >=1/3 && randomNumber < 2/3)
+    { computerMove= 'paper' 
+    result = 'You win'
+    }
+
+    else if (randomNumber >=2/3 && randomNumber < 1 )
+    { computerMove= 'scissors' 
+    result = 'tie'
+    }
+
+    alert(`You picked scissors. Computer picked ${computerMove}.${result}`)
+    "></button>
+</Div>
+    <script>
+    </script>
+  </body>
+</html>
